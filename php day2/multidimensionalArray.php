@@ -61,5 +61,5 @@ $marks= [
 // we can print it through for each as we've studied earlier 
 
 // bellow function is used just for testing
-print_r($marks);
+// print_r($marks);
 ?>
