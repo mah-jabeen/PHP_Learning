@@ -182,15 +182,60 @@
 // EXTR_PREFIX_IF_EXISTS - Only add prefix to variables if the same variable exists in the current symbol table
 // EXTR_REFS - Extracts variables as references. The imported variables are still referencing the values of the array parameter
 //extract(array, extract_rules, prefix) // it extracts the keys and converts it into a variable
-$color=["first"=>"red",
-"second"=>"pink",
-"third"=>"yellow",
-"fourth"=>"purple"
-];
-extract($color);
-echo "value of first is: $first <br>";
+// $color=["first"=>"red",
+// "second"=>"pink",
+// "third"=>"yellow",
+// "fourth"=>"purple"
+// ];
+// extract($color);
+// echo "value of first is: $first <br>";
+
+
+// EXTR_OVERWRITE 
+// $color=["first"=>"red",
+// "second"=>"pink",
+// "third"=>"yellow",
+// "fourth"=>"purple"
+// ];
+// extract($color,EXTR_OVERWRITE );
+// echo "value of first is: $first <br>";
+
+// EXTR_PREFIX_SAME 
+// $first = "orange";
+// $color=["first"=>"red",
+// "second"=>"pink",
+// "third"=>"yellow",
+// "fourth"=>"purple"
+// ];
+// extract($color,EXTR_PREFIX_SAME,"test" );
+// echo "value of first is: $first <br>";
+// echo "value of first is: $test_first <br>";
+// echo "value of second is: $second <br>";
+// echo "value of third is: $third <br>";
+// in array EXTR_PREFIX_ALL you have to give prefix for all values of an array
+
 
 // compact()
+// $color=["first"=>"red",
+// "second"=>"pink",
+// "third"=>"yellow",
+// "fourth"=>"purple"
+// ];
+// if this is the array you can make it through compact, in compact whatever the values name you want to give it will become parameter of compact(var1,var2,var3)
+// you can also convert simple array into associative array through compact
+
+$firstname = "mahjabeen";
+$lastname = "javed";
+$email = "hi";
+$password = "password";
+$password2 = "password";
+
+$extra= ["password","password2"];
+$newArray= compact("firstname","lastname","email","password",$extra);
+
+echo "<pre>";
+print_r($newArray);
+echo "</pre>";
 
 ?>
 
